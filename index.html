@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARK Manajemen Assistant Realtime Koordination | Platform Koordinasi Project</title>
+  <meta
+    id="page-description"
+    name="description"
+    content="MARK Manajemen Assistant Realtime Koordination membantu organisasi menjaga koordinasi project, visibilitas progres, ritme kerja tim, dan pelaporan secara lebih tertata dan meyakinkan."
+  >
+  <meta name="theme-color" content="#0a63ff">
+  <link rel="icon" type="image/png" href="./mark-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="MARK Manajemen Assistant Realtime Koordination">
+        <img class="brand-icon" src="./mark-icon.png" alt="MARK icon" width="52" height="52">
+        <span class="brand-copy">
+          <strong>MARK Manajemen Assistant Realtime Koordination</strong>
+          <span data-i18n="brandTagline">Platform koordinasi project untuk delivery, visibilitas progres, dan ritme kerja tim.</span>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <a class="nav-link" href="#workspace" data-i18n="navValue">Keunggulan</a>
+        <a class="nav-link" href="#preview-section" data-i18n="navPreview">Preview</a>
+        <a class="nav-link" href="#footer-contact" data-i18n="navContact">Kontak</a>
+        <div class="language-switcher" id="language-switcher" role="group" aria-label="Pemilih bahasa">
+          <span class="lang-label" data-i18n="languageLabel">Bahasa</span>
+          <button class="lang-btn active" type="button" data-language="id" aria-pressed="true">ID</button>
+          <button class="lang-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="./mark-logo.png" alt="MARK logo" width="320" height="99">
+          <span class="eyebrow" data-i18n="heroEyebrow">Platform Koordinasi Project</span>
+          <h1 data-i18n="heroTitle">Mewujudkan koordinasi project yang lebih tertib, responsif, dan meyakinkan.</h1>
+          <p data-i18n="heroBody">MARK Manajemen Assistant Realtime Koordination mendukung tim dalam menjaga kesinambungan kerja dari perencanaan hingga evaluasi. Seluruh pihak dapat memantau progres, prioritas, potensi hambatan, dan arah tindak lanjut dari satu referensi yang sama, sehingga koordinasi tidak lagi bergantung pada percakapan yang tercecer atau pelaporan manual yang terlambat.</p>
+
+          <div class="hero-note">
+            <span data-i18n="heroNote1">Dasbor lintas peran</span>
+            <span data-i18n="heroNote2">Alur kerja real-time</span>
+            <span data-i18n="heroNote3">Monitoring dan pelaporan</span>
+            <span data-i18n="heroNote4">Nyaman di berbagai perangkat</span>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-label="MARK dashboard preview">
+          <div class="stage-brand">
+            <img src="./mark-icon.png" alt="" aria-hidden="true" width="44" height="44">
+            <div>
+              <strong data-i18n="stageBrandTitle">Pusat Kendali MARK</strong>
+              <span data-i18n="stageBrandText">Pratinjau area kendali MARK dengan bahasa visual yang selaras dengan identitas brand.</span>
+            </div>
+          </div>
+
+          <div class="hero-top">
+            <article class="mini-kpi">
+              <strong data-i18n="heroMini1Title">Arah kerja lebih jelas</strong>
+              <span data-i18n="heroMini1Text">Setiap pekerjaan memiliki jalur tindak lanjut yang lebih terstruktur sehingga tim tidak mudah kehilangan fokus.</span>
+            </article>
+            <article class="mini-kpi">
+              <strong data-i18n="heroMini2Title">Koordinasi lebih terkendali</strong>
+              <span data-i18n="heroMini2Text">Informasi penting lebih mudah diikuti tanpa harus mengejar pembaruan dari berbagai jalur komunikasi.</span>
+            </article>
+            <article class="mini-kpi">
+              <strong data-i18n="heroMini3Title">Pelaporan lebih meyakinkan</strong>
+              <span data-i18n="heroMini3Text">Perkembangan project tampil lebih rapi saat dibahas dengan pimpinan, tim internal, maupun stakeholder.</span>
+            </article>
+          </div>
+
+          <div class="screen-shell">
+            <div class="screen-topbar">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <strong data-i18n="heroMockTopbar">Ringkasan Dasbor</strong>
+            </div>
+            <div class="screen-body">
+              <aside class="screen-sidebar" aria-hidden="true">
+                <div class="side-pill"></div>
+                <div class="side-pill"></div>
+                <div class="side-pill"></div>
+                <div class="side-pill"></div>
+                <div class="side-pill"></div>
+                <div class="side-pill"></div>
+              </aside>
+              <div class="screen-main">
+                <div class="row three">
+                  <div class="widget">
+                    <strong data-i18n="mockProjectHealth">Kesehatan Project</strong>
+                    <div class="bars">
+                      <div class="bar"><span style="width: 78%"></span></div>
+                      <div class="bar secondary"><span style="width: 54%"></span></div>
+                    </div>
+                  </div>
+                  <div class="widget">
+                    <strong data-i18n="mockTaskLoad">Beban Tugas</strong>
+                    <div class="bars">
+                      <div class="bar success"><span style="width: 66%"></span></div>
+                      <div class="bar"><span style="width: 48%"></span></div>
+                    </div>
+                  </div>
+                  <div class="widget">
+                    <strong data-i18n="mockPriorityAlerts">Peringatan Prioritas</strong>
+                    <div class="badge-row">
+                      <span class="chip" data-i18n="mockOverdueCount">7 lewat tenggat</span>
+                      <span class="chip alt" data-i18n="mockBlockerCount">3 hambatan</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row two">
+                  <div class="widget">
+                    <strong data-i18n="mockWeeklyPulse">Denyut Delivery Mingguan</strong>
+                    <div class="bars">
+                      <div class="bar"><span style="width: 88%"></span></div>
+                      <div class="bar secondary"><span style="width: 62%"></span></div>
+                      <div class="bar success"><span style="width: 74%"></span></div>
+                    </div>
+                    <small data-i18n="mockWeeklyPulseText">Memberikan gambaran cepat tentang progres, kapasitas tim, dan area yang membutuhkan eskalasi.</small>
+                  </div>
+                  <div class="widget">
+                    <strong data-i18n="mockModuleCoverage">Cakupan Modul</strong>
+                    <div class="chip-list">
+                      <span class="chip" data-i18n="chipDashboard">Dasbor</span>
+                      <span class="chip" data-i18n="chipKanban">Kanban</span>
+                      <span class="chip alt" data-i18n="chipMonitoring">Monitoring</span>
+                      <span class="chip alt" data-i18n="chipControls">Kontrol</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row four">
+                  <div class="widget"><strong data-i18n="mockPlanningTitle">Perencanaan</strong><small data-i18n="mockPlanningText">Intake, pemetaan kerja, penugasan.</small></div>
+                  <div class="widget"><strong data-i18n="mockExecutionTitle">Eksekusi</strong><small data-i18n="mockExecutionText">Board kerja dan aktivitas harian.</small></div>
+                  <div class="widget"><strong data-i18n="mockControlTitle">Pengendalian</strong><small data-i18n="mockControlText">Monitoring dan beban kerja.</small></div>
+                  <div class="widget"><strong data-i18n="mockReportingTitle">Pelaporan</strong><small data-i18n="mockReportingText">Ringkasan siap dipresentasikan.</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong data-i18n="stat1Title">Satu pusat kendali</strong>
+            <p data-i18n="stat1Text">Project, tugas, aktivitas tim, dan prioritas bergerak lebih selaras dalam satu alur kerja.</p>
+          </article>
+          <article class="stat-card">
+            <strong data-i18n="stat2Title">Progres lebih terbaca</strong>
+            <p data-i18n="stat2Text">Pimpinan, project lead, dan tim operasional dapat membaca kondisi lebih cepat tanpa menunggu rangkuman manual.</p>
+          </article>
+          <article class="stat-card">
+            <strong data-i18n="stat3Title">Koordinasi lebih efisien</strong>
+            <p data-i18n="stat3Text">Perubahan, tindak lanjut, dan ritme kerja harian lebih mudah dijaga ketika tim bergerak cepat.</p>
+          </article>
+          <article class="stat-card">
+            <strong data-i18n="stat4Title">Presentasi lebih siap</strong>
+            <p data-i18n="stat4Text">Tampilan dasbor dan ringkasan progres membantu tim tampil lebih percaya diri di hadapan client maupun stakeholder.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workspace">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker" data-i18n="mainSectionKicker">Ikhtisar Produk</span>
+            <h2 data-i18n="mainSectionTitle">Seluruh informasi penting diringkas dalam tab yang mudah dijelajahi.</h2>
+          </div>
+          <p data-i18n="mainSectionText">Halaman ini disusun untuk menonjolkan manfaat MARK secara lebih formal dan terarah. Pengunjung dapat memahami nilai utama platform, melihat gambaran halaman penting, dan menemukan informasi kontak dengan rapi.</p>
+        </div>
+
+        <div class="tab-shell">
+          <div class="tabs-scroll">
+            <div class="tab-list" data-tab-group="main" role="tablist" aria-label="Konten landing utama">
+              <button class="tab-button active" id="main-tab-overview" type="button" role="tab" aria-selected="true" data-tab="overview" data-i18n="mainTabOverview">Ringkasan</button>
+              <button class="tab-button" id="main-tab-features" type="button" role="tab" aria-selected="false" data-tab="features" data-i18n="mainTabFeatures">Keunggulan Utama</button>
+              <button class="tab-button" id="main-tab-preview" type="button" role="tab" aria-selected="false" data-tab="preview" data-i18n="mainTabPreview">Preview Halaman</button>
+              <button class="tab-button" id="main-tab-contact" type="button" role="tab" aria-selected="false" data-tab="contact" data-i18n="mainTabValue">Nilai Tambah</button>
+            </div>
+          </div>
+
+          <section class="tab-panel" id="panel-overview" role="tabpanel" data-tab-panel-group="main" data-panel="overview" aria-labelledby="main-tab-overview">
+            <div class="card-grid three">
+              <article class="card">
+                <h3 data-i18n="overviewCard1Title">Nilai yang langsung terasa</h3>
+                <p data-i18n="overviewCard1Text">MARK tidak berhenti pada pencatatan pekerjaan. Platform ini membantu arah kerja, progres, dan koordinasi lintas peran menjadi lebih hidup serta lebih mudah dibaca.</p>
+                <ul class="list">
+                  <li data-i18n="overviewCard1Item1">Seluruh pihak lebih cepat memahami apa yang sedang berjalan.</li>
+                  <li data-i18n="overviewCard1Item2">Potensi hambatan lebih cepat terlihat sebelum membesar.</li>
+                  <li data-i18n="overviewCard1Item3">Forum pembaruan progres menjadi lebih fokus karena data telah tertata.</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3 data-i18n="overviewCard2Title">Relevan untuk tim delivery</h3>
+                <p data-i18n="overviewCard2Text">Tim yang menangani banyak project memerlukan alat yang nyaman dipakai setiap hari sekaligus layak dibaca pada level manajemen. MARK hadir di antara dua kebutuhan tersebut.</p>
+                <ul class="list">
+                  <li data-i18n="overviewCard2Item1">Nyaman digunakan oleh tim inti untuk menjalankan pekerjaan harian.</li>
+                  <li data-i18n="overviewCard2Item2">Cukup rapi untuk dibawa ke pimpinan maupun client.</li>
+                  <li data-i18n="overviewCard2Item3">Membantu menjaga tempo kerja saat jumlah project terus bertambah.</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3 data-i18n="overviewCard3Title">Cakupan yang mendukung pertumbuhan</h3>
+                <p data-i18n="overviewCard3Text">Dari kickoff, pembagian kerja, pemantauan milestone, aktivitas tim, pengelolaan perubahan, hingga evaluasi progres, seluruhnya bergerak dalam ritme yang sama.</p>
+                <ul class="list">
+                  <li data-i18n="overviewCard3Item1">Tim tidak perlu terus-menerus berpindah antara banyak alat.</li>
+                  <li data-i18n="overviewCard3Item2">Informasi penting lebih mudah ditelusuri saat dibutuhkan.</li>
+                  <li data-i18n="overviewCard3Item3">Pertumbuhan project menjadi lebih mudah dikendalikan.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="tab-panel" id="panel-features" role="tabpanel" data-tab-panel-group="main" data-panel="features" aria-labelledby="main-tab-features" hidden>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <div class="icon">01</div>
+                <h3 data-i18n="feature1Title">Pusat kendali project</h3>
+                <p data-i18n="feature1Text">Seluruh pihak dapat melihat arah, progres, dan prioritas dari satu tempat yang lebih mudah dipahami.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">02</div>
+                <h3 data-i18n="feature2Title">Koordinasi lintas fungsi</h3>
+                <p data-i18n="feature2Text">Setiap peran mempertahankan fokus kerjanya masing-masing tanpa kehilangan konteks project secara keseluruhan.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">03</div>
+                <h3 data-i18n="feature3Title">Ritme kerja yang lebih tertib</h3>
+                <p data-i18n="feature3Text">Tugas bergerak, agenda berubah, dan tindak lanjut menumpuk dapat ditangani dengan lebih terukur.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">04</div>
+                <h3 data-i18n="feature4Title">Visibilitas progres yang konsisten</h3>
+                <p data-i18n="feature4Text">Perkembangan tim, milestone, dan kondisi project dapat dibaca lebih cepat sebelum muncul kejutan.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">05</div>
+                <h3 data-i18n="feature5Title">Ringkasan yang siap dipresentasikan</h3>
+                <p data-i18n="feature5Text">Dasbor dan visual progres membantu tim menyampaikan pembaruan dengan lebih rapi kepada pimpinan atau stakeholder.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">06</div>
+                <h3 data-i18n="feature6Title">Siap mendampingi tim yang bertumbuh</h3>
+                <p data-i18n="feature6Text">Ketika project, user, dan kebutuhan koordinasi semakin banyak, MARK tetap relevan sebagai titik temu kerja.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="tab-panel" id="panel-preview" role="tabpanel" data-tab-panel-group="main" data-panel="preview" aria-labelledby="main-tab-preview" hidden>
+            <div class="tabs-scroll" id="preview-section">
+              <div class="tab-list" data-tab-group="preview" role="tablist" aria-label="Preview halaman produk">
+                <button class="tab-button active" id="preview-tab-dashboard" type="button" role="tab" aria-selected="true" data-tab="dashboard" data-i18n="previewTabDashboard">Dasbor</button>
+                <button class="tab-button" id="preview-tab-kanban" type="button" role="tab" aria-selected="false" data-tab="kanban" data-i18n="previewTabKanban">Kanban</button>
+                <button class="tab-button" id="preview-tab-monitoring" type="button" role="tab" aria-selected="false" data-tab="monitoring" data-i18n="previewTabMonitoring">Monitoring</button>
+                <button class="tab-button" id="preview-tab-task" type="button" role="tab" aria-selected="false" data-tab="task" data-i18n="previewTabActivity">Aktivitas</button>
+                <button class="tab-button" id="preview-tab-settings" type="button" role="tab" aria-selected="false" data-tab="settings" data-i18n="previewTabControl">Kontrol</button>
+              </div>
+            </div>
+
+            <section class="tab-panel" role="tabpanel" data-tab-panel-group="preview" data-panel="dashboard" aria-labelledby="preview-tab-dashboard">
+              <div class="preview-layout">
+                <article class="preview-copy">
+                  <h3 data-i18n="dashboardCopyTitle">Dashboard Eksekutif</h3>
+                  <p data-i18n="dashboardCopyText">Tampilan ini menunjukkan seberapa cepat MARK membantu pimpinan atau project lead memahami kondisi kerja tanpa tenggelam dalam detail yang tidak mendesak.</p>
+                  <ul class="list">
+                    <li data-i18n="dashboardCopyItem1">Angka penting langsung terlihat sejak layar pertama.</li>
+                    <li data-i18n="dashboardCopyItem2">Ringkasan progres terasa lebih mudah dipahami.</li>
+                    <li data-i18n="dashboardCopyItem3">Sangat kuat sebagai tampilan pembuka saat presentasi.</li>
+                  </ul>
+                </article>
+
+                <div class="screen-shell">
+                  <div class="screen-topbar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <strong data-i18n="dashboardMockTopbar">Dasbor Eksekutif</strong>
+                  </div>
+                  <div class="screen-body">
+                    <aside class="screen-sidebar" aria-hidden="true">
+                      <div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div>
+                    </aside>
+                    <div class="screen-main">
+                      <div class="row three">
+                        <div class="widget"><strong data-i18n="mockRevenueImpact">Dampak Kinerja</strong><div class="bars"><div class="bar"><span style="width:82%"></span></div><div class="bar secondary"><span style="width:58%"></span></div></div></div>
+                        <div class="widget"><strong data-i18n="mockProjectLoad">Beban Project</strong><div class="bars"><div class="bar success"><span style="width:71%"></span></div><div class="bar"><span style="width:53%"></span></div></div></div>
+                        <div class="widget"><strong data-i18n="mockHotItems">Area Prioritas</strong><div class="chip-list"><span class="chip" data-i18n="mockRiskCount">5 risiko</span><span class="chip alt" data-i18n="mockActiveCount">11 aktif</span></div></div>
+                      </div>
+                      <div class="row two">
+                        <div class="widget"><strong data-i18n="mockDeliveryTrend">Tren Delivery</strong><div class="bars"><div class="bar"><span style="width:88%"></span></div><div class="bar secondary"><span style="width:72%"></span></div><div class="bar success"><span style="width:64%"></span></div></div></div>
+                        <div class="widget"><strong data-i18n="mockStakeholderView">Ringkasan Stakeholder</strong><div class="row-line wide"></div><div class="row-line medium"></div><div class="row-line short"></div></div>
+                      </div>
+                      <div class="row three">
+                        <div class="widget"><strong data-i18n="mockResource">Resource</strong><small data-i18n="mockResourceText">Alokasi tim dan kapasitas.</small></div>
+                        <div class="widget"><strong data-i18n="mockTimeline">Timeline</strong><small data-i18n="mockTimelineText">Perkembangan sprint dan milestone.</small></div>
+                        <div class="widget"><strong data-i18n="mockAlerts">Alert</strong><small data-i18n="mockAlertsText">Keterlambatan dan hambatan utama.</small></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="tab-panel" role="tabpanel" data-tab-panel-group="preview" data-panel="kanban" aria-labelledby="preview-tab-kanban" hidden>
+              <div class="preview-layout">
+                <article class="preview-copy">
+                  <h3 data-i18n="workflowCopyTitle">Papan Kerja Harian</h3>
+                  <p data-i18n="workflowCopyText">Bagian ini menunjukkan bagaimana MARK menjaga ritme kerja harian tetap bergerak tanpa membuat prioritas tercecer atau progres hilang di tengah jalan.</p>
+                  <ul class="list">
+                    <li data-i18n="workflowCopyItem1">Alur kerja terasa hidup dari backlog hingga selesai.</li>
+                    <li data-i18n="workflowCopyItem2">Pemilik tugas dan status review lebih mudah dibaca.</li>
+                    <li data-i18n="workflowCopyItem3">Sangat sesuai untuk daily standup dan kontrol kerja yang cepat.</li>
+                  </ul>
+                </article>
+
+                <div class="screen-shell">
+                  <div class="screen-topbar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <strong data-i18n="workflowMockTopbar">Papan Kanban Real-Time</strong>
+                  </div>
+                  <div class="screen-body">
+                    <aside class="screen-sidebar" aria-hidden="true">
+                      <div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div>
+                    </aside>
+                    <div class="screen-main">
+                      <div class="kanban-grid">
+                        <div class="lane">
+                          <strong data-i18n="workflowLaneBacklog">Backlog</strong>
+                          <div class="ticket"><span class="chip" data-i18n="workflowTagSetup">Inisiasi</span><div class="muted" data-i18n="workflowBacklogText1">Lingkup implementasi awal untuk dasbor client.</div></div>
+                          <div class="ticket"><span class="chip alt" data-i18n="workflowTagPlan">Rencana</span><div class="muted" data-i18n="workflowBacklogText2">Pemetaan PIC dan target sprint pekan ini.</div></div>
+                        </div>
+                        <div class="lane">
+                          <strong data-i18n="workflowLaneProgress">In Progress</strong>
+                          <div class="ticket"><span class="chip" data-i18n="workflowTagActive">Aktif</span><div class="muted" data-i18n="workflowProgressText">Pengerjaan visual pelaporan dan penyaringan project.</div></div>
+                        </div>
+                        <div class="lane">
+                          <strong data-i18n="workflowLaneReview">Review</strong>
+                          <div class="ticket"><span class="chip alt" data-i18n="workflowTagReview">Review</span><div class="muted" data-i18n="workflowReviewText">Sinkronisasi tindak lanjut dan penelaahan hasil sebelum melanjutkan.</div></div>
+                        </div>
+                        <div class="lane">
+                          <strong data-i18n="workflowLaneDone">Done</strong>
+                          <div class="ticket"><span class="chip" data-i18n="workflowTagDone">Selesai</span><div class="muted" data-i18n="workflowDoneText">Board real-time, monitoring, dan visibilitas aktivitas sudah tersedia.</div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="tab-panel" role="tabpanel" data-tab-panel-group="preview" data-panel="monitoring" aria-labelledby="preview-tab-monitoring" hidden>
+              <div class="preview-layout">
+                <article class="preview-copy">
+                  <h3 data-i18n="monitoringCopyTitle">Monitoring dan Pelaporan</h3>
+                  <p data-i18n="monitoringCopyText">Bagian ini memperlihatkan bahwa MARK bukan hanya alat kerja harian, tetapi juga alat baca kondisi project yang lebih tenang dan lebih tajam.</p>
+                  <ul class="list">
+                    <li data-i18n="monitoringCopyItem1">Membantu PM dan koordinator memahami kondisi lebih cepat.</li>
+                    <li data-i18n="monitoringCopyItem2">Visual progres lebih siap dibawa ke forum evaluasi.</li>
+                    <li data-i18n="monitoringCopyItem3">Mengurangi ketergantungan pada rangkuman manual terpisah.</li>
+                  </ul>
+                </article>
+
+                <div class="screen-shell">
+                  <div class="screen-topbar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <strong data-i18n="monitoringMockTopbar">Monitoring Project</strong>
+                  </div>
+                  <div class="screen-body">
+                    <aside class="screen-sidebar" aria-hidden="true">
+                      <div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div>
+                    </aside>
+                    <div class="screen-main">
+                      <div class="row two">
+                        <div class="widget"><strong data-i18n="mockStatusBreakdown">Sebaran Status</strong><div class="bars"><div class="bar"><span style="width:84%"></span></div><div class="bar secondary"><span style="width:46%"></span></div><div class="bar success"><span style="width:68%"></span></div></div></div>
+                        <div class="table-box"><strong data-i18n="mockTaskTypeRatio">Rasio Jenis Tugas</strong><div class="row-line wide"></div><div class="row-line medium"></div><div class="row-line short"></div></div>
+                      </div>
+                      <div class="row two">
+                        <div class="table-box"><strong data-i18n="mockSprintByProject">Sprint per Project</strong><div class="row-line wide"></div><div class="row-line wide"></div><div class="row-line medium"></div><div class="row-line short"></div></div>
+                        <div class="table-box"><strong data-i18n="mockWorkloadByUser">Beban Kerja per User</strong><div class="row-line wide"></div><div class="row-line medium"></div><div class="row-line medium"></div><div class="row-line short"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="tab-panel" role="tabpanel" data-tab-panel-group="preview" data-panel="task" aria-labelledby="preview-tab-task" hidden>
+              <div class="preview-layout">
+                <article class="preview-copy">
+                  <h3 data-i18n="activityCopyTitle">Aktivitas Tim yang Terdokumentasi</h3>
+                  <p data-i18n="activityCopyText">Bagian ini menunjukkan bahwa koordinasi tidak berhenti setelah tugas diberikan. Perubahan, catatan, dan jejak keputusan tetap mudah diikuti.</p>
+                  <ul class="list">
+                    <li data-i18n="activityCopyItem1">Aktivitas dan perubahan tersusun lebih runtut.</li>
+                    <li data-i18n="activityCopyItem2">Membantu handover dan evaluasi tanpa drama pencarian data.</li>
+                    <li data-i18n="activityCopyItem3">Memudahkan tim menjelaskan apa yang terjadi dan mengapa.</li>
+                  </ul>
+                </article>
+
+                <div class="screen-shell">
+                  <div class="screen-topbar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <strong data-i18n="activityMockTopbar">Detail Aktivitas</strong>
+                  </div>
+                  <div class="screen-body">
+                    <aside class="screen-sidebar" aria-hidden="true">
+                      <div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div>
+                    </aside>
+                    <div class="screen-main">
+                      <div class="row two">
+                        <div class="table-box">
+                          <strong data-i18n="mockTaskSummary">Ringkasan Tugas</strong>
+                          <div class="chip-list"><span class="chip" data-i18n="mockHighPriority">Prioritas Tinggi</span><span class="chip alt" data-i18n="mockReviewLabel">Review</span></div>
+                          <div class="row-line wide" style="margin-top: 12px;"></div>
+                          <div class="row-line medium"></div>
+                          <div class="row-line short"></div>
+                        </div>
+                        <div class="activity-box">
+                          <strong data-i18n="mockRecentActivity">Aktivitas Terbaru</strong>
+                          <div class="row-line wide"></div>
+                          <div class="row-line medium"></div>
+                          <div class="row-line wide"></div>
+                        </div>
+                      </div>
+                      <div class="timeline-list">
+                        <div class="timeline-item"><strong data-i18n="activityTimeline1Title">Status dipindah ke review</strong><span data-i18n="activityTimeline1Text">Koordinator menelaah hasil dan menambahkan catatan penyempurnaan.</span></div>
+                        <div class="timeline-item"><strong data-i18n="activityTimeline2Title">Tenggat disesuaikan</strong><span data-i18n="activityTimeline2Text">Penyesuaian dilakukan setelah dependensi dari modul lain teridentifikasi.</span></div>
+                        <div class="timeline-item"><strong data-i18n="activityTimeline3Title">Masukan stakeholder tercatat</strong><span data-i18n="activityTimeline3Text">Umpan balik langsung masuk sebagai bagian dari jejak aktivitas.</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="tab-panel" role="tabpanel" data-tab-panel-group="preview" data-panel="settings" aria-labelledby="preview-tab-settings" hidden>
+              <div class="preview-layout">
+                <article class="preview-copy">
+                  <h3 data-i18n="controlCopyTitle">Pusat Kontrol Operasional</h3>
+                  <p data-i18n="controlCopyText">Halaman ini menunjukkan bahwa MARK tetap rapi ketika digunakan oleh banyak orang, banyak project, dan banyak kebutuhan koordinasi dalam satu organisasi.</p>
+                  <ul class="list">
+                    <li data-i18n="controlCopyItem1">Menguatkan kesan bahwa sistem ini tertata dan terarah.</li>
+                    <li data-i18n="controlCopyItem2">Membantu tim bertumbuh tanpa kehilangan kontrol.</li>
+                    <li data-i18n="controlCopyItem3">Memberi rasa aman saat aplikasi digunakan lebih luas.</li>
+                  </ul>
+                </article>
+
+                <div class="screen-shell">
+                  <div class="screen-topbar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <strong data-i18n="controlMockTopbar">Pusat Kontrol</strong>
+                  </div>
+                  <div class="screen-body">
+                    <aside class="screen-sidebar" aria-hidden="true">
+                      <div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div><div class="side-pill"></div>
+                    </aside>
+                    <div class="screen-main">
+                      <div class="settings-grid">
+                        <div class="form-box">
+                          <strong data-i18n="mockApplicationSetup">Pengaturan Aplikasi</strong>
+                          <div class="form-line wide"></div>
+                          <div class="form-line medium"></div>
+                          <div class="form-line wide"></div>
+                          <div class="form-line short"></div>
+                        </div>
+                        <div class="form-box">
+                          <strong data-i18n="mockRoleMatrix">Matriks Akses</strong>
+                          <div class="toggle-row"><span data-i18n="mockRoleMatrixItem1">Akses ringkasan untuk project lead</span><span class="toggle"></span></div>
+                          <div class="toggle-row"><span data-i18n="mockRoleMatrixItem2">Visibilitas aktivitas tim</span><span class="toggle"></span></div>
+                          <div class="toggle-row"><span data-i18n="mockRoleMatrixItem3">Pengendalian alur persetujuan</span><span class="toggle"></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="tab-panel" id="panel-contact" role="tabpanel" data-tab-panel-group="main" data-panel="contact" aria-labelledby="main-tab-contact" hidden>
+            <div class="contact-grid">
+              <article class="info-card">
+                <h3 data-i18n="valueCard1Title">Mengapa MARK layak dipertimbangkan</h3>
+                <p data-i18n="valueCard1Text">MARK bukan sekadar tempat menaruh pekerjaan, melainkan platform yang membantu menjaga arah kerja tim tetap selaras dari hari ke hari.</p>
+                <div class="check-grid">
+                  <div>
+                    <strong data-i18n="valueCard1Block1Title">Koordinasi lebih tenang</strong>
+                    <p data-i18n="valueCard1Block1Text">Seluruh pihak memiliki referensi kerja yang sama, sehingga miskomunikasi lebih mudah ditekan.</p>
+                  </div>
+                  <div>
+                    <strong data-i18n="valueCard1Block2Title">Visibilitas lebih jelas</strong>
+                    <p data-i18n="valueCard1Block2Text">Kondisi project, beban tim, dan prioritas tidak lagi terasa abu-abu.</p>
+                  </div>
+                  <div>
+                    <strong data-i18n="valueCard1Block3Title">Ritme kerja lebih terjaga</strong>
+                    <p data-i18n="valueCard1Block3Text">Tim lebih mudah bergerak konsisten dari hari ke hari tanpa kehilangan arah.</p>
+                  </div>
+                  <div>
+                    <strong data-i18n="valueCard1Block4Title">Lebih siap di depan stakeholder</strong>
+                    <p data-i18n="valueCard1Block4Text">Pembaruan progres terasa lebih rapi, profesional, dan meyakinkan.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="info-card">
+                <h3 data-i18n="valueCard2Title">Mengapa relevan bagi organisasi yang bertumbuh</h3>
+                <p data-i18n="valueCard2Text">MARK nyaman dipakai untuk kerja harian, namun tetap cukup rapi untuk menjelaskan kondisi project pada level manajemen maupun client.</p>
+                <div class="check-grid">
+                  <div>
+                    <strong data-i18n="valueCard2Block1Title">Arah kerja lebih jelas</strong>
+                    <p data-i18n="valueCard2Block1Text">Prioritas dan progres lebih mudah dipahami tanpa harus menebak-nebak.</p>
+                  </div>
+                  <div>
+                    <strong data-i18n="valueCard2Block2Title">Perpindahan kerja lebih halus</strong>
+                    <p data-i18n="valueCard2Block2Text">Tugas, review, dan tindak lanjut tidak mudah terputus di tengah jalan.</p>
+                  </div>
+                  <div>
+                    <strong data-i18n="valueCard2Block3Title">Nyaman untuk tim yang bertumbuh</strong>
+                    <p data-i18n="valueCard2Block3Text">Saat project dan user bertambah, kontrol kerja tetap terasa rapi.</p>
+                  </div>
+                  <div>
+                    <strong data-i18n="valueCard2Block4Title">Lebih mantap untuk dipresentasikan</strong>
+                    <p data-i18n="valueCard2Block4Text">Ringkasan dan visual progres membantu pembaruan terasa lebih mantap.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="card-grid two" style="margin-top: 16px;">
+              <article class="faq-card">
+                <h3 data-i18n="faqTitle">Pertanyaan umum</h3>
+                <details open>
+                  <summary data-i18n="faq1Question">Apa yang paling terasa setelah menggunakan MARK?</summary>
+                  <div class="faq-answer" data-i18n="faq1Answer">Bukan hanya pekerjaan yang lebih rapi, tetapi koordinasi lintas peran menjadi lebih mudah, progres lebih mudah dibaca, dan keputusan lebih cepat diambil.</div>
+                </details>
+                <details>
+                  <summary data-i18n="faq2Question">Siapa yang paling diuntungkan oleh MARK?</summary>
+                  <div class="faq-answer" data-i18n="faq2Answer">Tim delivery, software house, unit operasional, maupun organisasi yang menangani banyak project dan memerlukan visibilitas kerja yang lebih baik.</div>
+                </details>
+                <details>
+                  <summary data-i18n="faq3Question">Mengapa halaman ini tersedia dalam dua bahasa?</summary>
+                  <div class="faq-answer" data-i18n="faq3Answer">Agar materi presentasi lebih fleksibel digunakan untuk kebutuhan internal maupun eksternal, baik dalam Bahasa Indonesia maupun English.</div>
+                </details>
+              </article>
+
+              <article class="faq-card">
+                <h3 data-i18n="advantageTitle">Keunggulan yang lebih terasa</h3>
+                <ul class="list">
+                  <li data-i18n="advantage1">Membuat kerja tim terasa lebih tertata tanpa menambah beban yang tidak perlu.</li>
+                  <li data-i18n="advantage2">Membantu pimpinan membaca kondisi project lebih cepat dan dengan kejernihan yang lebih baik.</li>
+                  <li data-i18n="advantage3">Menjaga koordinasi antar tim tetap selaras saat pekerjaan bergerak cepat.</li>
+                  <li data-i18n="advantage4">Memberi kesan lebih siap dan profesional saat progres dibahas dengan client atau stakeholder.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="./mark-logo.png" alt="MARK logo" width="180" height="56">
+        <div>
+          <strong>MARK Manajemen Assistant Realtime Koordination</strong>
+          <span data-i18n="footerTagline">Platform koordinasi project yang membantu tim bekerja lebih tertata, selaras, dan siap saat progres perlu dipresentasikan.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
