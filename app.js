@@ -3,11 +3,21 @@
   const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
   const languageSwitcher = document.getElementById("language-switcher");
   const pageDescription = document.getElementById("page-description");
+  const pageKeywords = document.getElementById("page-keywords");
+  const ogLocale = document.getElementById("og-locale");
+  const ogTitle = document.getElementById("og-title");
+  const ogDescription = document.getElementById("og-description");
+  const twitterTitle = document.getElementById("twitter-title");
+  const twitterDescription = document.getElementById("twitter-description");
+  const structuredData = document.getElementById("seo-structured-data");
   const languageStorageKey = "mark-landing-language";
+  const siteUrl = "https://markapp.id/";
+  const logoUrl = "https://markapp.id/mark-logo.png";
   const translations = {
     id: {
-      pageTitle: "MARK Manajemen Assistant Realtime Koordination | Platform Koordinasi Project",
-      pageDescription: "MARK Manajemen Assistant Realtime Koordination membantu organisasi menjaga koordinasi project, visibilitas progres, ritme kerja tim, dan pelaporan secara lebih tertata dan meyakinkan.",
+      pageTitle: "MARK | Software Koordinasi Project, Dashboard Proyek, dan Monitoring Tim",
+      pageDescription: "MARK Manajemen Assistant Realtime Koordination adalah software koordinasi project untuk dashboard proyek, monitoring progres, task management, kanban tim, dan pelaporan kerja yang lebih tertata.",
+      pageKeywords: "software manajemen proyek, software koordinasi project, dashboard project, dashboard proyek, monitoring proyek, task management, kanban tim, pelaporan progres, delivery management",
       languageSwitchLabel: "Pemilih bahasa",
       brandTagline: "Platform koordinasi project untuk delivery, visibilitas progres, dan ritme kerja tim.",
       navValue: "Keunggulan",
@@ -206,6 +216,7 @@
       advantage3: "Menjaga koordinasi antar tim tetap selaras saat pekerjaan bergerak cepat.",
       advantage4: "Memberi kesan lebih siap dan profesional saat progres dibahas dengan client atau stakeholder.",
       footerTagline: "Platform koordinasi project yang membantu tim bekerja lebih tertata, selaras, dan siap saat progres perlu dipresentasikan.",
+      footerMiniContactLabel: "Kontak:",
       footerContactHeading: "Kontak",
       footerCallLabel: "Telepon Langsung",
       footerContactText: "Hubungi kami untuk demo, diskusi kebutuhan, atau pembahasan operasional yang selaras dengan alur kerja tim Anda.",
@@ -213,8 +224,9 @@
       footerCopyrightText: "© 2026 MARK Manajemen Assistant Realtime Koordination. Seluruh hak cipta dilindungi."
     },
     en: {
-      pageTitle: "MARK Management Assistant Realtime Koordination | Project Coordination Platform",
-      pageDescription: "MARK Management Assistant Realtime Koordination helps organizations maintain project coordination, progress visibility, team cadence, and reporting in a more structured and convincing way.",
+      pageTitle: "MARK | Project Coordination Software, Team Dashboard, and Progress Monitoring",
+      pageDescription: "MARK Management Assistant Realtime Koordination is project coordination software for team dashboards, progress monitoring, task management, kanban workflows, and clearer delivery reporting.",
+      pageKeywords: "project coordination software, project management dashboard, project monitoring, task management software, kanban workflow, delivery reporting, team coordination platform",
       languageSwitchLabel: "Language selector",
       brandTagline: "A project coordination platform for delivery, progress visibility, and team cadence.",
       navValue: "Value",
@@ -413,6 +425,7 @@
       advantage3: "It keeps cross-team coordination aligned while work is moving fast.",
       advantage4: "It creates a more prepared and professional impression when progress is reviewed with clients or stakeholders.",
       footerTagline: "A project coordination platform that helps teams work with more structure, alignment, and confidence when progress needs to be presented.",
+      footerMiniContactLabel: "Contact:",
       footerContactHeading: "Contact",
       footerCallLabel: "Direct Call",
       footerContactText: "Contact us for a demo, needs discussion, or an operational conversation aligned with your team workflow.",
@@ -489,14 +502,93 @@
     }
   }
 
+  function updateMeta(node, value) {
+    if (node && value) {
+      node.setAttribute("content", value);
+    }
+  }
+
+  function buildStructuredData(language, dictionary) {
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          name: "MARK Manajemen Assistant Realtime Koordination",
+          alternateName: "MARK",
+          applicationCategory: "BusinessApplication",
+          applicationSubCategory: language === "en" ? "Project Coordination Platform" : "Platform Koordinasi Project",
+          operatingSystem: "Web",
+          inLanguage: language,
+          url: siteUrl,
+          image: logoUrl,
+          description: dictionary.pageDescription,
+          keywords: dictionary.pageKeywords,
+          featureList: [
+            dictionary.heroNote1,
+            dictionary.heroNote2,
+            dictionary.heroNote3,
+            dictionary.previewTabKanban,
+            dictionary.previewTabMonitoring
+          ]
+        },
+        {
+          "@type": "Organization",
+          name: "MARK",
+          url: siteUrl,
+          logo: logoUrl,
+          telephone: "+6285161250909"
+        },
+        {
+          "@type": "FAQPage",
+          inLanguage: language,
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: dictionary.faq1Question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: dictionary.faq1Answer
+              }
+            },
+            {
+              "@type": "Question",
+              name: dictionary.faq2Question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: dictionary.faq2Answer
+              }
+            },
+            {
+              "@type": "Question",
+              name: dictionary.faq3Question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: dictionary.faq3Answer
+              }
+            }
+          ]
+        }
+      ]
+    };
+  }
+
   function applyLanguage(language) {
     const dictionary = translations[language] || translations.id;
 
     document.documentElement.lang = language;
     document.title = dictionary.pageTitle;
 
-    if (pageDescription) {
-      pageDescription.setAttribute("content", dictionary.pageDescription);
+    updateMeta(pageDescription, dictionary.pageDescription);
+    updateMeta(pageKeywords, dictionary.pageKeywords);
+    updateMeta(ogTitle, dictionary.pageTitle);
+    updateMeta(ogDescription, dictionary.pageDescription);
+    updateMeta(twitterTitle, dictionary.pageTitle);
+    updateMeta(twitterDescription, dictionary.pageDescription);
+    updateMeta(ogLocale, language === "en" ? "en_US" : "id_ID");
+
+    if (structuredData) {
+      structuredData.textContent = JSON.stringify(buildStructuredData(language, dictionary));
     }
 
     if (languageSwitcher) {
